@@ -12,7 +12,7 @@ Landing.propTypes = {
 	NAV_SPACER: PropTypes.object.isRequired,
 	navHeight: PropTypes.number.isRequired,
 	viewport: PropTypes.string,
-	storyRef: PropTypes.object.isRequired,
+	visionRef: PropTypes.object.isRequired,
 };
 
 //FOR NOW, ALL IMGS MUST BE EXACTLY IDENTICAL IN SIZE TO THE PIXEL
@@ -20,7 +20,7 @@ const imgArr = ['bar-img.jpg', 'woman-drinking.jpg', 'restaurant-table.jpg'].map
 	(filename) => `/imgs/stock/about_page/landing_carousel/${filename}`
 );
 
-export default function Landing({ isNavAniComplete, NAV_SPACER, navHeight, viewport, storyRef }) {
+export default function Landing({ isNavAniComplete, NAV_SPACER, navHeight, viewport, visionRef }) {
 	const headerRef = useRef();
 	useEffect(() => constructRellax(headerRef, { speed: -2 }), []);
 
@@ -47,12 +47,12 @@ export default function Landing({ isNavAniComplete, NAV_SPACER, navHeight, viewp
 						className={styles.underline}
 					/>
 					{viewport === 'desktop' && isNavAniComplete && (
-						<CTA_BUTTON storyRef={storyRef} navHeight={navHeight} />
+						<CTA_BUTTON visionRef={visionRef} navHeight={navHeight} />
 					)}
 				</motion.header>
 				<Carousel imgs={imgArr} viewport={viewport} />
 				{viewport !== 'desktop' && isNavAniComplete && (
-					<CTA_BUTTON storyRef={storyRef} navHeight={navHeight} viewport={viewport} />
+					<CTA_BUTTON visionRef={visionRef} navHeight={navHeight} viewport={viewport} />
 				)}
 			</motion.div>
 		</motion.section>
@@ -60,12 +60,12 @@ export default function Landing({ isNavAniComplete, NAV_SPACER, navHeight, viewp
 }
 
 CTA_BUTTON.propTypes = {
-	storyRef: PropTypes.object.isRequired,
+	visionRef: PropTypes.object.isRequired,
 	navHeight: PropTypes.number.isRequired,
 	viewport: PropTypes.string,
 };
 
-export function CTA_BUTTON({ storyRef, navHeight, viewport }) {
+export function CTA_BUTTON({ visionRef, navHeight, viewport }) {
 	return (
 		<motion.div
 			animate='animate'
@@ -77,7 +77,7 @@ export function CTA_BUTTON({ storyRef, navHeight, viewport }) {
 				className='STYLED_BTN'
 				whileTap={{ scale: viewport !== 'desktop' ? 0.9 : 1 }}
 				onClick={() => {
-					smoothscroll(storyRef.current.offsetTop - navHeight, 1000);
+					smoothscroll(visionRef.current.offsetTop - navHeight, 1000);
 				}}
 			>
 				נתחיל במסע
