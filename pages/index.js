@@ -32,9 +32,8 @@ export default function Home({
 				setPopup({
 					isOpen: true,
 					content: {
-						heading: 'שלום לך!',
+						heading: 'שלום לכם!',
 						text: [
-							"ברוכים הבאים לבוטיק היינות הראשון מסוגו במדינת ישראל, ",
 							'תמיד חלמתם להוציא יין משלכם? 🍇 ',
 							'או שאולי רציתם אירוע באולם יינות בוטיק בניחוח אירופאי? 🥐 ',
 							'תצטרפו למאות לקוחות מרוצים אשר הפיקו אירוע שלא ישכחו והכינו יין שלא טעמו וראו כמותו בארץ! 🎉🚀',
