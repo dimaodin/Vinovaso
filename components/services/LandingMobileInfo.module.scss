@@ -1,0 +1,43 @@
+.LandingMobileInfo {
+    background-color: #e2dade;
+    background-image: var(--bg-texture);
+    display: flex;
+    justify-content: center;
+    padding: 0 .5rem calc(var(--landing-spacer-height) + 7.5vh);
+    &::before {
+        content: unset;
+    }
+    .infoContainer {
+        position: relative;
+        padding: 2rem;
+        background-color: var(--secondary-color);
+        border-radius: 25px;
+        max-width: 34.375rem;
+        width: 95vw;
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 0;
+            height: 15vw;
+            background-color: #e2dade;
+            background-image: var(--bg-texture);
+        }
+        .imgContainer {
+            background-image: unset;
+            background-size: unset;
+            background-position: unset;
+            position: relative;
+            border-radius: 25px;
+            border-top: 5px solid var(--highlight-color-fade-less);
+            z-index: 1;
+            img {
+                border-radius: 25px;
+                width: 100%;
+            }
+        }
+    }
+}

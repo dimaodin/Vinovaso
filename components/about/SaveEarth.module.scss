@@ -1,0 +1,256 @@
+#SaveEarth {
+    section {
+        font-family: var(--main-font);
+        z-index: 1;
+        // border-top: 3rem solid var(--highlight-color);
+        padding: 6rem 1.5rem 0;
+        position: relative;
+        @media screen and (min-width: 46.875rem){
+            padding-bottom: 6rem;
+        }
+        &::before {
+            content: '';
+            z-index: -1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            clip-path: polygon(100% 0, 0% 100%, 0 0);
+            background: var(--secondary-color);
+            min-width: 20.3rem;
+            min-height: 20.3rem;
+            width: 75vw;
+            height: 75vw;
+            max-width: 31.25rem;
+            max-height: 31.25rem;
+            @media screen and (min-width: 46.875rem){
+                width: 50vw;
+                height: 50vw;
+            }
+        }
+        .contentContainer {
+            @media screen and (min-width: 46.875rem){
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                max-width: 68.75rem;
+                margin: 0 auto;
+                > * {
+                    margin: unset !important;
+                }
+            }
+            .imgContainer {
+                margin: 0 auto;
+                max-width: 20rem;
+                border-radius: 25px;
+                box-shadow: 5px 5px 15px rgba(0,0,0,.15);
+                @media screen and (min-width: 46.875rem){
+                    margin-left: 3rem !important;
+                    transform: translateX(35%);
+                }
+                img {
+                    width: 100%;
+                    border-radius: 25px;
+                }
+            }   
+            .info {
+                margin: 3rem auto;
+                max-width: 37.5rem;
+                @media screen and (min-width: 46.875rem){
+                    margin: 0 auto;
+                }
+                header {
+                    h3 {
+                        font-family: var(--serif-font);
+                        color: var(--highlight-color);
+                        font-size: 2.85rem;
+                        font-weight: 600;
+                        &::first-letter {
+                            text-transform: capitalize;
+                        }
+                    }
+                    p {
+                        font-family: var(--main-font);
+                        color: var(--secondary-color-fade-slight);
+                        margin-top: 1.25rem;
+                        font-size: .85rem;
+                        font-style: italic;
+                        font-weight: 300;
+                    }
+                }
+                .text {
+                    @media screen and (min-width: 61.85rem){
+                        display: flex;
+                        > * + * {
+                            margin-right: 1rem;
+                        }
+                        .textContainer {
+                            margin-top: 1.35rem;
+                            margin-bottom: 1.35rem;
+                        }
+                    }
+                    .textContainer {
+                        &:not(:last-of-type){
+                            margin-top: 1.35rem;
+                            margin-bottom: 1.35rem;
+                        }
+                    }
+                    h4 {
+                        font-family: var(--main-font);
+                        font-size: 1.1rem;
+                        font-weight: 600;
+                        color: var(--highlight-color);
+                        margin-bottom: .5rem;
+                    }
+                    p {
+                        font-family: var(--main-font);
+                        color: var(--secondary-color-fade-slight);
+                        line-height: 1.25rem;
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+    }
+    #primary {
+        background-color: var(--secondary-color);
+        padding-top: 1rem;
+        padding-bottom: 3rem;
+        @media screen and (min-width: 46.875rem){
+            padding-top: 3rem;
+        }
+        &::before {
+            all: unset;
+            content: '';
+            display: block;
+            width: 20vw;
+            height: 20vw;
+            position: absolute;
+            z-index: 10;
+            top: 0%;
+            left: -10%;
+            transform-origin: top right;
+            transform: rotate(45deg);
+            background-image: url('../../public/imgs/stock/about_page/wine-sprinkle.jpg');
+            background-size: cover;
+            border: .5rem solid #e2dade;
+            @media screen and (min-width: 61.85rem){
+                border: 1.25rem solid #e2dade;
+            }
+        }
+        .contentContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            @media screen and (min-width: 46.875rem){
+                flex-direction: row;
+            }
+            @media screen and (min-width: 61.85rem){
+                align-items: flex-start;
+            }
+        }
+        .imgContainer {
+            order: 2;
+            margin-left: -1.5rem !important;
+            margin-right: -1.5rem !important;
+            margin-top: 1.5rem;
+            max-width: 28.125rem;
+            img {
+                filter: hue-rotate(243deg);
+                border-radius: 25px;
+            }
+            @media screen and (min-width: 46.875rem){
+                transform: translateX(0%);
+                margin-right: 3rem !important;
+                margin-left: 0 !important;
+            }
+        }
+        .info {
+            color: var(--main-color) !important; 
+            margin: 1rem 0;
+            text-align: center;
+            header {
+                color: var(--main-color);
+                h3 {
+                    color: var(--main-color);
+                    font-weight: 600;
+                }
+                p {
+                    color: var(--main-color) !important;
+                    margin: 1.25rem auto 0;
+                }
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 25vw;
+                    height: 25vw;
+                    max-width: 4.68rem;
+                    max-height: 4.68rem;
+                    background-image: url('../../public/imgs/stock/svgs/small-grape.png');
+                    background-size: cover;
+                    margin: 0 auto 1.5rem;
+                    @media screen and (min-width: 46.875rem){
+                        margin-bottom: 1.5rem;
+                    }
+                }
+            }
+            .text {
+                @media screen and (min-width: 61.85rem){
+                    display: flex;
+                    text-align: right;
+                    > * + * {
+                        margin-right: 1rem;
+                    }
+                    .textContainer {
+                        margin-top: 1.35rem;
+                        margin-bottom: 1.35rem;
+                    }
+                }
+                .textContainer {
+                    // display: flex;
+                    &::before,
+                    &::after {
+                        content: '';
+                        display: block;
+                        height: 1px;
+                        width: 100%;
+                        background-color: var(--highlight-color);
+                    }
+                    &::before {
+                        margin-bottom: 1.35rem;
+                    }
+                    &::after {
+                        margin-top: 1.35rem;
+                        @media screen and (min-width: 46.875rem){
+                            content: unset;
+                        }
+                    }
+                    @media screen and (max-width: 46.875rem){
+                        &:not(:first-of-type){
+                            &::before,
+                            &::after {
+                                content: unset;
+                            }
+                        }
+                    }
+                    h4 {
+                        color: rgb(180, 68, 68);
+                        font-weight: 500;
+                        font-size: 2rem;
+                        opacity: 1;
+                    }
+                }
+                h4 {
+                    font-family: var(--main-font);
+                    color: var(--main-color);
+                    font-weight: 400;
+                }
+                p {
+                    font-family: var(--main-font);
+                    color: var(--main-color);
+                    max-width: 25rem;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}

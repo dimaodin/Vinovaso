@@ -1,0 +1,50 @@
+.AdditionalInfo {
+    .textContainer {
+        display: flex;
+        flex-direction: column;
+        > * + * {
+            margin-top: 1rem;
+        }
+        padding: 2rem 0 0;
+        @media screen and (min-width: 46.875rem){
+            flex-direction: row;
+            max-width: 75rem;
+            margin: 0 auto;
+            padding: 3rem 1rem 0;
+            > * + * {
+                margin-top: unset;
+                margin-right: 1.5rem;
+            }
+        }
+        border-top: 1px solid var(--highlight-color-fade);
+        .textBlock {
+            font-family: var(--main-font);
+            h4 {
+                font-family: var(--main-font);
+                color: var(--highlight-color);
+                margin-bottom: .25rem;
+                font-weight: 500;
+            }
+            p {
+                font-family: var(--main-font);
+                font-size: .75rem;
+                opacity: .85;
+                letter-spacing: 1px;
+                color: var(--main-color);
+                font-weight: 300;
+                @media screen and (min-width: 31.25rem){
+                    font-size: .9rem;
+                }
+            }
+        }
+    }
+    .CTA {
+        position: relative;
+        text-align: center;
+        margin-top: 2rem;
+        cursor: pointer;
+        @media screen and (min-width: 46.875rem){
+            margin-top: 4rem;
+        }
+    }
+}

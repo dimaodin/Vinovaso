@@ -1,0 +1,127 @@
+#VintnerCourse {
+    background-color: var(--secondary-color);
+    position: relative;
+    padding: .5rem 1rem 2rem;
+    padding-bottom: 4rem;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: var(--highlight-color);
+        background-image: url("../../public/imgs/textures/green-dust-and-scratches.png");
+        opacity: .8;
+    }
+    .contentContainer {
+        padding: 4rem 1rem;
+        max-width: 75rem;
+        z-index: 1;
+        position: relative;
+        margin: 0 auto;
+        @media screen and (min-width: 46.875rem){
+            display: flex;
+            justify-content: space-around;
+        }
+        .headerContainer {
+            position: relative;
+            margin-bottom: 2rem;
+            @media screen and (min-width: 46.875rem){
+                flex-basis: 40%;
+                order: 1;
+                margin-right: 2rem;
+            }
+            h2 {
+                font-size: 1.75rem;
+                font-family: var(--serif-font);
+                line-height: 1.9rem;
+                letter-spacing: 1px;
+                word-spacing: -.1rem;
+                margin-bottom: 1.5rem;
+                font-weight: 400;
+                border-right: 3px solid var(--highlight-color);
+                padding-right: .5rem;
+                overflow: hidden;
+                @media screen and (min-width: 31.25rem){
+                    max-width: 80%;
+                    font-size: 2rem;
+                    line-height: 1.9rem;
+                }
+                @media screen and (min-width: 46.875rem){
+                    max-width: unset;
+                    padding-right: 0;
+                    border-right: none;
+                }
+                @media screen and (min-width: 61.85rem){
+                    font-size: 2.8rem;
+                    line-height: 2.75rem;
+                }
+                span {
+                    position: relative;
+                    z-index: 1;
+                    @media screen and (min-width: 46.875rem){
+                        display: inline-block;
+                        white-space: nowrap;
+                    }
+                    .emph {
+                        color: var(--main-color);
+                        display: inline-block;
+                        @media screen and (min-width: 46.875rem){
+                            .emphUnderline {
+                                height: 3px;
+                                width: 100%;
+                                background-color: var(--main-color);
+                            }
+                        }
+                    }
+                }
+            }
+            p {
+                font-family: var(--main-font);
+                font-weight: 300;
+                font-size: .75rem;
+                letter-spacing: 1px;
+                color: var(--main-color);
+                margin-bottom: 1rem;
+                @media screen and (min-width: 31.25rem){
+                    font-size: .9rem;
+                }
+            }
+            .CTA {
+                margin-top: 1.25rem;
+                button {
+                    background-color: var(--secondary-color);
+                    color: var(--main-color);
+                }
+            }
+        }
+        .gallery {
+            position: relative;
+            max-width: 31.25rem;
+            margin: 0 auto;
+            @media screen and (min-width: 46.875rem){
+                flex-basis: 55%;
+                margin: 0;
+            }
+            .imgContainer {
+                box-shadow: 5px 5px 10px rgba(0,0,0,.2);
+                overflow: hidden;
+                border-radius: 25px;
+                img {
+                    width: 100%;
+                }
+                &#main {
+                    width: 75%;
+                }
+                &#secondary {
+                    position: absolute;
+                    width: 40%;
+                    top: 50%;
+                    left: 0%;
+                    transform: translate(0%, -50%);
+                }
+            }
+        }
+    }
+}

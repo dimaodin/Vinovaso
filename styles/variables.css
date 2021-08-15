@@ -1,0 +1,34 @@
+:root {
+    --main-font: 'Arimo', sans-serif;
+    --serif-font: 'Amatic SC', serif;
+
+    --main-color: #f7f7f7;
+    --main-color-fade-slight: #f7f7f7d3;
+    --main-color-fade-less: #f7f7f7a1;
+    --main-color-fade: #f7f7f773;
+    --main-color-fade-more: #f7f7f742;
+    --main-color-fade-more-2x: #f7f7f715;
+
+    --secondary-color: #2d0138;
+    --secondary-color-fade-slight: #2d0138de;
+    --secondary-color-fade-less: #2d0138a2;
+    --secondary-color-fade: #2d013841;
+    --secondary-color-fade-more: #2d013827;
+    --secondary-color-fade-more-2x: #2d013810;
+
+    --highlight-color: #a867dd;
+    --highlight-color-fade-less-2x: #a15bdad7;
+    --highlight-color-fade-less: #a15bdaad;
+    --highlight-color-light: #a15bdae9;
+    --highlight-color-light-less: #a15bdaec;
+    --highlight-color-fade: #a15bda8e;
+    --highlight-color-fade-more: #a15bda56;
+    --highlight-color2: #c177fd;
+    --ease: cubic-bezier(.38,.25,0,.97);
+
+}
+
+
+
+
+

@@ -1,0 +1,227 @@
+#Contact {
+    .landing {
+        display: grid;
+        min-height: 100vh;
+        grid-template-rows: var(--navHeight) 10vh min-content;
+        background-color: var(--secondary-color);
+        row-gap: 3rem;
+        padding-bottom: 3rem;
+        .landingHeader {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 .5rem;
+            margin-top: -1rem;
+            font-family: var(--serif-font);
+            h1 {
+                font-size: 1.65rem;
+                font-weight: 600;
+                line-height: 1.65rem;
+                color: var(--main-color);
+                transition: 350ms ease;
+                @media screen and (min-width: 34.375rem){
+                    font-size: 2.25rem;
+                    line-height: 2.25rem;
+                }
+                .emph {
+                    font-style: italic;
+                    color: var(--highlight-color);
+                    padding-right: .2rem;
+                }
+            }
+        }
+        .formContainer {
+            background-color: white;
+            width: 90%;
+            margin: 0 auto;
+            padding: 3rem 1rem;
+            box-shadow: 2px 2px 15px rgba(0,0,0,.1);
+            font-family: var(--main-font);
+            max-width: 53.125rem;
+            border-radius: 2.5%;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            --gap: 1.5rem;
+            > * + * {
+                margin-top: var(--gap);
+            }
+            @media screen and (min-width: 34.375rem){
+                &:last-child {
+                    padding-bottom: 10vw;
+                }
+                h2 {
+                    padding: 0 0 2vw;
+                }
+            }
+            h2 {
+                font-size: 1.15rem;
+                font-weight: 600;
+                letter-spacing: 1px;
+                transition: 350ms ease;
+                color: var(--highlight-color);
+                margin-top: calc(var(--gap) + 1rem);
+            }
+            //[FORM COMPONENT IS HERE]
+            .progressBar {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                max-width: 62.5rem;
+                --marker-gap: clamp(1rem, 15vw, 10rem);
+                padding: 1rem clamp(1rem, 10vw, 4rem) 0;
+                > * + * {
+                    margin-right: var(--marker-gap);
+                }
+                @media screen and (min-width: 34.375rem){
+                    margin-top: calc(var(--gap) + 2.5rem);
+                    padding-top: 0;
+                }
+                .mark {
+                    min-width: 10px;
+                    min-height: 10px;
+                    border-radius: 50%;
+                    background-color: var(--highlight-color-fade-more);
+                    position: relative;
+                    transition: 500ms ease;
+                    &:not(:last-of-type){
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            right: 100%;
+                            transform: translateY(-50%);
+                            display: block;
+                            height: 2px;
+                            width: var(--marker-gap);
+                            background-color: var(--highlight-color-fade-more);
+                        }
+                    }
+                    .label {
+                        position: absolute;
+                        cursor: pointer;
+                        top: calc(100% + .5rem);
+                        left: 50%;
+                        transform: translateX(-50%);
+                        font-size: clamp(.75rem, 2vw, 1rem);
+                        font-family: var(--main-font);
+                        text-transform: capitalize;
+                        font-weight: 500;
+                        color: var(--highlight-color);
+                        opacity: .5;
+                        width: 6.25rem;
+                    }
+                    &.current {
+                        background-color: var(--highlight-color);
+                        &::before {
+                            content: '';
+                            display: block;
+                            border-radius: 50%;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            height: 200%;
+                            width: 200%;
+                            border: 2px solid var(--highlight-color);
+                        }
+                        .label {
+                            opacity: .9;
+                        }
+                    }
+                    &.complete {
+                        background-color: var(--highlight-color);
+                        &::after {
+                            background-color: inherit;
+                        }
+                        .label {
+                            opacity: .9;
+                        }
+                    }
+                }
+            }
+            .buttonContainer {
+                display: flex;
+                justify-content: space-between;
+                > * + * {
+                    margin-right: 4rem;
+                }
+                .backButton, .nextButton {
+                    top: 1rem;
+                    right: 1.5rem;
+                    @media screen and (min-width: 46.875rem){
+                        position: absolute;
+                    }
+                    button {
+                        display: flex;
+                        align-items: center;
+                        &:hover {
+                            span {
+                                border-bottom: 1px solid var(--main-color);
+                            }
+                        }
+                        span {
+                            font-weight: 600;
+                            margin-right: .5rem;
+                            transition: 350ms ease;
+                            font-size: .9rem;
+                            border-bottom: 1px solid transparent;
+                        }
+                        svg {
+                            width: .5rem;
+                        }
+                    }
+                }
+                .nextButton {
+                    right: unset;
+                    left: 1.5rem;
+                    &:hover {
+                        span {
+                            border-bottom: 1px solid var(--highlight-color) !important;
+                        }
+                    }
+                    span {
+                        margin: 0 0 0 .5rem;
+                        position: relative;
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            bottom: -.125rem;
+                            left: 0;
+                            right: 0;
+                            background-color: var(--highlight-color);
+                            height: 1px;
+                            transform: scale(0);
+                            transform-origin: left;
+                            transition: 500ms ease;
+                        }
+                    }
+                    svg {
+                        color: var(--main-color);
+                    }
+                    &.disabled {
+                        pointer-events: none;
+                    }
+                    &.enabled {
+                        span {
+                            color: var(--highlight-color);
+                            &::after,
+                            &:hover::after  {
+                                transform: scale(1);
+                            }
+                        }
+                        svg {
+                            color: var(--highlight-color);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

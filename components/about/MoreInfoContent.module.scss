@@ -1,0 +1,39 @@
+.moreInfoContent {
+    background-color: #e2dade;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    padding-bottom: clamp(2rem, 8.5vw, 6rem);
+    position: relative;
+    z-index : 1;
+    overflow: hidden;
+    .spacer {
+        display: inline-block;
+        --size: 3rem;
+        width: calc(var(--size) * 1.3333);
+        height: calc(var(--size) * 1.3333);
+        margin-bottom: .5rem;
+        opacity: .9;
+        margin: 2rem 0 2.5rem;
+        z-index: 1;
+        position: relative;
+        .bg {
+            position: absolute;
+            background-image: url("../../public/imgs/textures/asfalt-dark.png");
+            background-color: var(--highlight-color);
+            height: 500vh;
+            width: 200vw;
+            transform-origin: top center;
+            transform: translateX(50%) rotate(5deg);
+            top: 55%;
+            z-index: -1;
+        }
+        @media screen and (min-width: 61.85rem){
+            margin: -1.5rem 0 -1rem;
+        }
+        @media screen and (min-width: 78.125rem){
+            margin: -1rem 0 -.5rem;
+        }
+
+    }
+}
