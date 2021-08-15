@@ -21,7 +21,7 @@ const MakeYourWine = React.forwardRef(({ viewport }, ref) => {
                         &#160;
                         <motion.span variants={sectionTransitions.headerVariant}>איכותיים 
                             <span className={styles.emph}>
-                                למותג האישי שלכם.
+                                לחצי השני שלכם.
                                 <motion.div 
                                     className={styles.emphUnderline}
                                     variants={sectionTransitions.emphUnderline}

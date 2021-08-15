@@ -26,7 +26,7 @@ export default function LandingInfo({refs, navHeight, viewport}){
                 <li>
                     הכנת יין בוטיק מרהיב <strong>שבלעדי רק לכם</strong>. 
                     <span
-                        onClick={() => smoothscroll(refs.bars.current.offsetTop - scrollAnchorDesktopAdjustment, scrollAnchorDuration)} 
+                        onClick={() => smoothscroll(refs.yourWine.current.offsetTop - scrollAnchorDesktopAdjustment, scrollAnchorDuration)} 
                         className={styles.scrollAnchor}
                     >קחו אותי 🍸
                     </span>
@@ -34,15 +34,15 @@ export default function LandingInfo({refs, navHeight, viewport}){
                 <li>
                     הפקת בוטיק <strong>לאירוע החגיגי שלכם</strong>. 
                     <span 
-                        onClick={() => smoothscroll(refs.classes.current.offsetTop - scrollAnchorDesktopAdjustment, scrollAnchorDuration)}
+                        onClick={() => smoothscroll(refs.event.current.offsetTop - scrollAnchorDesktopAdjustment, scrollAnchorDuration)}
                         className={styles.scrollAnchor}
                     >קחו אותי 🍹
                     </span>
                 </li>
                 <li>
-                    שיעורי יינות <strong>פרטיים עם תעודת סיום</strong>. 
+                    שיעורי יינות <strong>פרטיים תעודת הכשרה</strong>. 
                     <span
-                        onClick={() => smoothscroll(refs.bases.current.offsetTop - scrollAnchorDesktopAdjustment, scrollAnchorDuration)} 
+                        onClick={() => smoothscroll(refs.vintnerCourse.current.offsetTop - scrollAnchorDesktopAdjustment, scrollAnchorDuration)} 
                         className={styles.scrollAnchor}
                     >קחו אותי 🍾
                     </span>
