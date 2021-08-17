@@ -2,7 +2,7 @@
 
 ![badge5](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white) ![badge3](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![badge1](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)  ![badge4](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white) ![badge2](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 
-> Front-end Next.js web-application for a Boutique Wine Venue.
+> Front-end web app for a Boutique Wine Venue, developed with NextJS.
 
 <br>
 
