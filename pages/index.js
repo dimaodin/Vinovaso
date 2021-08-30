@@ -37,7 +37,7 @@ export default function Home({
 							"ברוכים הבאים לבוטיק היינות הראשון מסוגו במדינת ישראל, ",
 							'תמיד חלמתם להוציא יין משלכם? 🍇 ',
 							'או שאולי רציתם אירוע באולם יינות בוטיק בניחוח אירופאי? 🥐 ',
-							'תצטרפו למאות לקוחות מרוצים אשר הפיקו אירוע שלא ישכחו והכינו יין שלא טעמו וראו כמותו בארץ! 🎉🚀',
+							'תצטרפו למאות לקוחות מרוצים אשר הפיקו אירוע שלא ישכחו והכינו יין שלא טעמו וראו כמותו בארץ! 🎉',
 						],
 						img: '/imgs/stock/popup/popup_img.jpg',
 						ctaText: 'אני רוצה לדעת עוד!',
