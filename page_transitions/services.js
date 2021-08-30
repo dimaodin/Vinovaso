@@ -76,46 +76,7 @@ export const promiseTransitions = {
             }
         }
     },
-    textboxVariant: {
-        animate: {
-            opacity: 1,
-            y: 0,
-            transition: {
-                ease: [.38, .25, 0, 1],
-                duration: 1
-            }
-        },
-        initial: {
-            opacity: 0,
-            y: 50
-        }
-    },
-    ctaVariant: {
-        animate: {
-            opacity: 1,
-            y: 0,
-            transition: {
-                ease: [.38, .25, 0, 1],
-                duration: .5,
-                when: 'beforeChildren'
-            }
-        },
-        initial: {
-            opacity: 0,
-            y: 50
-        }
-    },
-    ctaUnderlineVariant: {
-        animate: {
-            scaleX: 1,
-            transition: {
-                duration: .5
-            }
-        },
-        initial: {
-            scaleX: 0
-        }
-    },
+
     stagger: {
         animate: {
             transition: {

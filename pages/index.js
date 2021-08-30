@@ -75,6 +75,8 @@ export default function Home({
 						<motion.div variants={landingTransitions.line} className={styles.line} />
 						<motion.div variants={landingTransitions.line} className={styles.line} />
 						<motion.div variants={landingTransitions.line} className={styles.line} />
+						<motion.div variants={landingTransitions.line} className={styles.line} />
+						<motion.div variants={landingTransitions.line} className={styles.line} />
 						<motion.img
 							src='/imgs/stock/logos/vinovaso-grape.png'
 							alt='Vinovaso Grape'

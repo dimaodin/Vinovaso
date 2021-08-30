@@ -90,6 +90,14 @@
                 left: 80%;
                 top: 50%;
             }
+            &:nth-of-type(5) {
+                left: 0%;
+                top: 50%;
+            }
+            &:nth-of-type(6) {
+                left: 100%;
+                top: 50%;
+            }
         }
         img {
             visibility: hidden;

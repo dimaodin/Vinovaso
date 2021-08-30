@@ -19,11 +19,11 @@ export default function PopUp({ setPopup, popup }) {
 	const [content, setContent] = useState({});
 	useEffect(() => {
 		const errorContent = {
-			heading: "We're sorry.",
+			heading: "אנחנו מצטערים.",
 			text:
-				'The website function you are attempting is currently unavailable. This is an issue on our end and will be fixed as soon as possible.',
+				'פונקציית האתר שאתה מנסה אינה זמינה כרגע. זוהי בעיה שלענייננו ותתוקן בהקדם האפשרי.',
 			img: '/imgs/stock/popup/popup_img.jpg',
-			ctaText: 'Close',
+			ctaText: 'סגירה',
 			ctaFunc: () => setPopup({ isOpen: false }),
 		};
 		if (popup.content === 'error' || !popup.content) {

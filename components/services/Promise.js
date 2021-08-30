@@ -64,21 +64,6 @@ const Promise = React.forwardRef(({ viewport }, ref) => {
                         <img src="/imgs/stock/services_page/services_promise_3.jpg" alt="Vinovaso"/>
                         <img id={styles.dots} className={styles.embellishment} src='/imgs/embellishments/wine-bottle.png' alt="Wine Bottle"/>
                     </div>
-                    {viewport !== 'mobile' && <motion.div 
-                        className={styles.galleryTextRight}
-                        animate={inView ? 'animate' : 'initial'}
-                        variants={promiseTransitions.stagger}
-                    >
-                        <motion.p variants={promiseTransitions.textboxVariant}>צרו איתנו קשר עוד היום</motion.p>
-                        <motion.p variants={promiseTransitions.textboxVariant}>ונראה מה נוכל לעשות</motion.p>
-                        <motion.p variants={promiseTransitions.textboxVariant}>רק בשבילך!</motion.p>
-                        <Link scroll={false} href='/contact'>
-                            <motion.a variants={promiseTransitions.ctaVariant}>
-                                <p>שכנעתם אותי 🔥</p>
-                                <motion.div variants={promiseTransitions.ctaUnderlineVariant}/>
-                            </motion.a>
-                        </Link>
-                    </motion.div>}
                 </div>
             </div>
         </motion.section>
