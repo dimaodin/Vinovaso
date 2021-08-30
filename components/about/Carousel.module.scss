@@ -23,8 +23,7 @@
         @media screen and (min-width: 61.85rem){
             z-index: 100;
             top: 50%;
-            left: 50%;
-            left: calc(100% - clamp(1rem, 50vw, var(--max-img-size)) - 2rem);
+            left: calc(100% - clamp(1rem, 50vw, var(--max-img-size)) - 1rem);
             margin-left: 2rem;
             bottom: unset;
             transform: translate(-50%, -50%) rotate(90deg);
@@ -68,7 +67,7 @@
             position: absolute;
             top: 50%;
             @media screen and (min-width: 61.85rem){
-                width: 50vw;
+                width: 49.5vw;
                 max-width: var(--max-img-size);
             }
         }
@@ -84,7 +83,6 @@
                 transform: translate(-0, -50%);
                 // width: 100%;
                 border-right: none;
-                transform-origin: right;
             }
         }
         #left,

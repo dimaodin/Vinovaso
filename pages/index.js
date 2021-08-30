@@ -32,8 +32,9 @@ export default function Home({
 				setPopup({
 					isOpen: true,
 					content: {
-						heading: 'שלום לכם!',
+						heading: 'שלום לך!',
 						text: [
+							"ברוכים הבאים לבוטיק היינות הראשון מסוגו במדינת ישראל, ",
 							'תמיד חלמתם להוציא יין משלכם? 🍇 ',
 							'או שאולי רציתם אירוע באולם יינות בוטיק בניחוח אירופאי? 🥐 ',
 							'תצטרפו למאות לקוחות מרוצים אשר הפיקו אירוע שלא ישכחו והכינו יין שלא טעמו וראו כמותו בארץ! 🎉🚀',
@@ -71,6 +72,9 @@ export default function Home({
 					>
 						<div className={styles.bg} />
 						<motion.div variants={landingTransitions.line} className={styles.line} />
+						<motion.div variants={landingTransitions.line} className={styles.line} />
+						<motion.div variants={landingTransitions.line} className={styles.line} />
+						<motion.div variants={landingTransitions.line} className={styles.line} />
 						<motion.img
 							src='/imgs/stock/logos/vinovaso-grape.png'
 							alt='Vinovaso Grape'
@@ -79,7 +83,7 @@ export default function Home({
 						/>
 						<motion.header variants={headerTransitions.staggerHeader}>
 							<div style={{ overflow: 'hidden' }}>
-								<motion.p variants={headerVariant}>שלום וברוכים הבאים 🥂</motion.p>
+								<motion.p variants={headerVariant}>שלום וברוכים הבאים <span className={styles.shake}> 🥂</span></motion.p>
 							</div>
 							<div style={{ overflow: 'hidden' }}>
 								<motion.h1 variants={headerVariant}>בוטיק יינות <span>בחוויה אחרת</span>.</motion.h1>

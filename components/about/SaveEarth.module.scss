@@ -118,24 +118,37 @@
         @media screen and (min-width: 46.875rem){
             padding-top: 3rem;
         }
+        &::after {
+            all: unset;
+            content: '';
+            display: block;
+            width: 20vw;
+            height: 20vw;
+            border-radius: 50%;
+            background-color: var(--secondary-color);
+            box-shadow: 5px 5px 15px var(--secondary-color);
+            position: absolute;
+            z-index: 10;
+            top: 0%;
+            right: -17%;
+            transform-origin: top right;
+            transform: rotate(45deg);
+        }
         &::before {
             all: unset;
             content: '';
             display: block;
             width: 20vw;
             height: 20vw;
+            border-radius: 50%;
+            background-color: var(--secondary-color);
+            box-shadow: 5px 5px 15px var(--secondary-color);
             position: absolute;
             z-index: 10;
             top: 0%;
             left: -10%;
             transform-origin: top right;
             transform: rotate(45deg);
-            background-image: url('../../public/imgs/stock/about_page/wine-sprinkle.jpg');
-            background-size: cover;
-            border: .5rem solid #e2dade;
-            @media screen and (min-width: 61.85rem){
-                border: 1.25rem solid #e2dade;
-            }
         }
         .contentContainer {
             display: flex;

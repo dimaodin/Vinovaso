@@ -3,7 +3,6 @@ import styles from './Landing.module.scss';
 import { motion } from 'framer-motion';
 import smoothscroll from 'smoothscroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import MouseSprite from '../common/MouseSprite';
 import LandingMobileInfo from './LandingMobileInfo';
 import LandingInfo from './LandingInfo';
 import { landingTransitions } from './../../page_transitions/services';
@@ -34,15 +33,6 @@ export default function Landing({ viewport, navHeight, NAV_SPACER, refs }){
         >
             <div ref={bgImgRef} className={styles.imgContainer}/>
             <div className={styles.info}>
-                <div className={styles.mouseSprite}>
-                    <MouseSprite 
-                        clickCB={() => 
-                            smoothscroll(viewport === 'mobile' 
-                                ? mobileInfoRef.current.offsetTop 
-                                : refs.promise.current.offsetTop - navHeight / 2, 1000
-                        )}
-                    />
-                </div>
                 {viewport !== 'mobile' && NAV_SPACER}
                 <motion.div
                     className={styles.textContainer}

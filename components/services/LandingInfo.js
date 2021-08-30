@@ -40,7 +40,7 @@ export default function LandingInfo({refs, navHeight, viewport}){
                     </span>
                 </li>
                 <li>
-                    שיעורי יינות <strong>פרטיים תעודת הכשרה</strong>. 
+                    שיעורי יינות <strong>פרטיים עם תעודת סיום</strong>. 
                     <span
                         onClick={() => smoothscroll(refs.vintnerCourse.current.offsetTop - scrollAnchorDesktopAdjustment, scrollAnchorDuration)} 
                         className={styles.scrollAnchor}

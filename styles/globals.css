@@ -70,6 +70,7 @@ svg {
 /* scrollbar */
 ::-webkit-scrollbar {
     width: .7rem;
+
 }
 ::-webkit-scrollbar-track {
     background: #000;
@@ -77,7 +78,7 @@ svg {
 ::-webkit-scrollbar-thumb {
     background: var(--highlight-color);
     border: 2px solid #000;
-    border-radius: 15px;
+    border-radius: 25px;
 }
 ::-webkit-scrollbar-thumb:hover {
     background: var(--secondary-color);
